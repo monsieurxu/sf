@@ -285,6 +285,10 @@ CPL_write_gdal <- function(x, fname, driver, options, Type, dims, gt, p4s, na_va
     invisible(.Call('_sf_CPL_write_gdal', PACKAGE = 'sf', x, fname, driver, options, Type, dims, gt, p4s, na_val))
 }
 
+CPL_number_processors <- function() {		     
+     .Call('_sf_CPL_number_processors', PACKAGE = 'sf')
+}
+    
 CPL_read_wkb <- function(wkb_list, EWKB = FALSE, spatialite = FALSE) {
     .Call('_sf_CPL_read_wkb', PACKAGE = 'sf', wkb_list, EWKB, spatialite)
 }
